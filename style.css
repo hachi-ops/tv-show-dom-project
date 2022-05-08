@@ -1,3 +1,28 @@
-#root {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+body {
+  width: 100%;
+
+}
+#episode-list {
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.episode {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: baseline;
+ width: 80%;   
+}
+
