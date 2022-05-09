@@ -86,6 +86,7 @@ function makePageForEpisodes(episodeList) {
     summary.innerHTML = e.summary;
 
     episode.className = "episode";
+    summary.className = "summary";
 
     episode.appendChild(heading);
     episode.appendChild(image);
@@ -112,6 +113,7 @@ function makePageForShows(shows) {
     image.alt = show.name;
     image.setAttribute = ("id", "show-img");
     showElement.className = "episode";
+    summary.className = "summary";
 
     showElement.appendChild(heading);
     showElement.appendChild(image);
