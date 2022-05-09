@@ -12,6 +12,31 @@
       padding-top: 20px;   
 }
 
+body {
+  background: rgb(207, 100, 48);
+    background: linear-gradient(261deg, rgba(207, 100, 48, 1) 25%, rgba(150, 39, 69, 1) 47%, rgba(34, 3, 23, 0.9345938204383316) 88%);
+}
+
+
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+select, input {
+ border-style: none;
+ height: 36px;
+ border-radius: 5px;
+  width: 70%;
+  background: rgb(255, 255, 255);
+  margin-bottom: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 #episode-list { 
   margin: 0 auto;
 }
@@ -28,7 +53,11 @@ img {
  max-width: 400px;
  margin: 20px auto;
  padding: 15px;
+ background-color: antiquewhite;
+
 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+border-radius: 10px;
 }
 
 h2 {
