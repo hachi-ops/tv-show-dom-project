@@ -105,8 +105,10 @@ function makePageForShows(shows) {
     const heading = document.createElement("h3");
     const image = document.createElement("img");
     const summary = document.createElement("p");
+    const runtime = document.createElement("p");
 
-    heading.innerText = `${show.name} - Runtime:${show.runtime}`;
+    heading.innerText = `${show.name}`;
+    runtime.innerText = `- Runtime:${show.runtime}`;
     summary.innerHTML = show.summary;
 
     image.src = show.image.original;
@@ -118,6 +120,7 @@ function makePageForShows(shows) {
     showElement.appendChild(heading);
     showElement.appendChild(image);
     showElement.appendChild(summary);
+    showElement.appendChild(runtime);
     showList.appendChild(showElement);
 
     showElement.addEventListener("click", () => {
