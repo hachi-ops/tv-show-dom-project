@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | My Name (My GitHub username)</title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  </head>
 
-  <body>
-    <div id="root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TV Show Project | My Name (My GitHub username)</title>
+  <link href="./style.css" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="inputs">
+        <!-- <p id="reset-page">RESET PAGE</p> -->
+        <div>
+          <select id="select-show"></select>
+          <p>select show</p>
+        </div>
+        <div>
+          <input id="search-box" type="text" />
+          <p id="search-count">Please enter a search term</p>
+        </div>
+        <div>
+          <select id="select-input"></select>
+          <p>Select episode</p>
+        </div>       
     </div>
+  
+    <div id="show-list"></div>
+    <div id="episode-list"></div>
+    <div>All this stuff came from TVMaze.com</div>
+  </div>
 
-    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+  <script src="episodes.js"></script>
+  <script src="shows.js"></script>
 
-    <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
-  </body>
+  <!-- Loads YOUR javascript code -->
+  <script src="script.js"></script>
+</body>
+
 </html>
