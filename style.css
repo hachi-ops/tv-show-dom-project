@@ -6,100 +6,157 @@
   box-sizing: border-box;
 }
 
-#root {
-  width: 100%;
-    display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;   
-      padding-top: 20px;   
-}
-
-body {
-  padding: 10px;
+html {
   background: rgb(207, 100, 48);
-    background: linear-gradient(261deg, rgba(207, 100, 48, 1) 25%, rgba(150, 39, 69, 1) 47%, rgba(34, 3, 23, 0.9345938204383316) 88%);
-    font-family: "Proza Libre", "League Spartan", sans-serif;
+  background: linear-gradient(261deg, rgba(207, 100, 48, 1) 25%, rgba(150, 39, 69, 1) 47%, rgba(34, 3, 23, 0.9345938204383316) 88%);
+  font-family: "Proza Libre", "League Spartan", sans-serif;
+  color: #A43A3D;
+  padding-top: 50px;
 }
 
 
 
-
-
-select, input {
-    display: block;
- border-style: none;
- height: 36px;
- border-radius: 5px;
-  width: 70%;
-  background: rgb(255, 255, 255);
-  margin-bottom: 16px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+#back-to-all_btn {
+  display: block;
+  background-color: #301426;
+  color: aliceblue;
+  padding: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
   cursor: pointer;
-  margin: 0 auto;
+
+  margin-left: 30px;
 }
 
-.inputs {  
-  width: 95%;  
-}
-
-.inputs p {
+header h1 {
+  color: rgb(2, 34, 30);
   text-align: center;
   color: azure;
 }
 
-#episode-list { 
-  margin: 0 auto;
+header h2 {
+  color: rgb(3, 44, 39);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.episode {
- align-items: center;
- width: 90%;
- max-width: 400px;
- margin: 20px auto;
- padding: 20px;
- background-color: antiquewhite;
-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-border-radius: 10px;
-}
-
-h2 {
-  text-align: center;
-}
-.summary{
-  padding: 20px;  
-}
-
-@media screen and (min-width: 200px){
-  #episode-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 800px) {
-.inputs {
+.filter-genre {
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 80%;
 }
 
-input {
-  width: 250px;
+input,
+input[type="text"],
+select {
+  display: block;
+  height: 50px;
+  width: 80%;
+  padding: 0;
+  text-indent: 20px;
+  outline: none;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#show-list {
+
+.control-panel,
+.episodes-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 0;
+  width: 90%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.card {
+  background-color: rgb(238, 245, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.show-card {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+  padding: 20px;
+}
+
+.panel {
+  width: 300px;
+
+}
+
+
+.shows-list,
+.episodes-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;  
+  justify-content: center;
+  gap: 30px;
 }
 
-  }
+.show,
+.card {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  gap: 20px;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: antiquewhite;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border-radius: 10px;
+
+}
+
+.show h1,
+.card h1 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.panel-one img,
+.card img {
+  display: block;
+  margin: auto;
+}
+
+.panel-two,
+.card p {
+  height: 200px;
+  overflow-y: scroll;
+
+}
+
+#showTitleHeader,
+#countDisplay {
+  color: aliceblue;
+  text-align: end;
+  margin-right: 40px;
+}

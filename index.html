@@ -4,39 +4,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV Show Project | My Name (My GitHub username)</title>
-  <link href="./style.css" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <title>TV Show DOM - Level 500 - Sample Solution</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap"
+    rel="stylesheet" />
+
+  <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
   <div id="root">
-    <div class="inputs">
-        <!-- <p id="reset-page">RESET PAGE</p> -->
-        <div>
-          <select id="select-show"></select>
-          <p>select show</p>
-        </div>
-        <div>
-          <input id="search-box" type="text" />
-          <p id="search-count">Please enter a search term</p>
-        </div>
-        <div>
-          <select id="select-input"></select>
-          <p>Select episode</p>
-        </div>       
+
+    <header>
+      <button id="back-to-all_btn">Back to all shows</button>
+      <h1>TV Shows</h1>
+      <h2 id="showTitleHeader"></h2>
+    </header>
+
+    <div id="episodesPage">
+      <div id="controls" class="episodes-controls">
+        <select id="episodeSelect"></select>
+        <input id="searchInput" type="text" placeholder="your search term..." />
+        <span id="countDisplay">Displaying n episodes</span>
+      </div>
+      <div id="episodes" class="episodes-list"></div>
     </div>
-  
-    <div id="show-list"></div>
-    <div id="episode-list"></div>
-    <div>All this stuff came from TVMaze.com</div>
+
+    <div id="showsPage">
+      <!-- <header></header> -->
+
+      <div id="controlPanel" class="control-panel">
+        <div class="filter-genre"><span class="control">Filtering for </span><input id="showsSearchInput"
+            class="control" type="text" placeholder="search for a show" value="search for any genre..." />
+        </div>
+
+        <div class="control" id="filterSummary">?</div>
+        <select id="showSelect"></select>
+      </div>
+      <div>
+        <ul id="showsList" class="shows-list"></ul>
+      </div>
+    </div>
   </div>
 
-  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-  <script src="episodes.js"></script>
   <script src="shows.js"></script>
-
-  <!-- Loads YOUR javascript code -->
   <script src="script.js"></script>
 </body>
 
